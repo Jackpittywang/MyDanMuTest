@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void startAnimator(View view) {
         getX();
-        getX();
         mTanmu_container.removeAllViews();
         //startAnimator();
         startForAnimators();
@@ -72,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 for (int i = 0; i < 10; i++) {
-                    Log.e("qw", "MainActivity.run.i= "+i);
+                    Log.e("qw", "MainActivity.run.i= " + i);
                     Message message = mHandler.obtainMessage();
                     message.what = i;
                     boolean b = mHandler.sendMessage(message);
-                    Log.e("qw", "MainActivity.run发送消息结果= "+b);
+                    Log.e("qw", "MainActivity.run发送消息结果= " + b);
                     SystemClock.sleep(5000);
                 }
             }
@@ -140,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDanMuView(int pos) {
-        Log.e("qw", "MainActivity.initDanMuView.pos= "+pos);
+        Log.e("qw", "MainActivity.initDanMuView.pos= " + pos);
         mDanmuView = (LinearLayout) LayoutInflater.from(getApplicationContext()).inflate(R.layout.danmu, null);
         mDanmuText = (TextView) mDanmuView.findViewById(R.id.textView);
         mDammuImg = (ImageView) mDanmuView.findViewById(R.id.imageView);
@@ -149,12 +148,12 @@ public class MainActivity extends AppCompatActivity {
     List<String> contentList;
 
     private void setDanMuViewContent(int pos) {
-        Log.e("qw", "MainActivity.setDanMuViewContent.pos= "+pos);
+        Log.e("qw", "MainActivity.setDanMuViewContent.pos= " + pos);
         mDanmuText.setText(contentList.get(pos));
     }
 
     private void getDanMuViewHeight(int pos) {
-        Log.e("qw", "MainActivity.getDanMuViewHeight.pos= "+pos);
+        Log.e("qw", "MainActivity.getDanMuViewHeight.pos= " + pos);
         mDanmuView.measure(0, 0);
         mMMDanmuViewHeight = mDanmuView.getMeasuredHeight();
         getRandomTopMargin();
