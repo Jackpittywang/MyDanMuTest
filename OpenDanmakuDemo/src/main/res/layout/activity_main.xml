@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.monidanmu2.MyVideoView
+        android:id="@+id/vvv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.opendanmaku.DanmakuView
+        android:id="@+id/danmakuView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:end_Y_offset="0.8"
+        app:max_row="4"
+        app:max_running_per_row="2"
+        app:pick_interval="4000"
+        app:show_debug="false"
+        app:start_Y_offset="0.2"/>
+</RelativeLayout>
