@@ -47,18 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
     private List<IDanmakuItem> initItems() {
         List<IDanmakuItem> list = new ArrayList<>();
-        /*for (int i = 0; i < 100; i++) {
-            IDanmakuItem item = new DanmakuItem(this, i + " : plain text danmuku", mDanmakuView.getWidth());
-            list.add(item);
-        }*/
-
-        String msg = " : text with image   ";
+        String msg = "弹幕内容   ";
         for (int i = 0; i < 100; i++) {
-            ImageSpan imageSpan = new ImageSpan(this, R.drawable.em);
-            //ImageSpan imageSpan = new ImageSpan(this, R.drawable.ic_default_circle);
-            SpannableString spannableString = new SpannableString(i + msg);
-            spannableString.setSpan(imageSpan, spannableString.length() - 2, spannableString.length() - 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            IDanmakuItem item = new DanmakuItem(this, spannableString, mDanmakuView.getWidth(), 0, 0, 0, 1.5f);
+            IDanmakuItem item = new DanmakuItem(this,msg+i, 0, 0);
+            item.setTextSize(20);
             list.add(item);
         }
         return list;

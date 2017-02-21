@@ -30,4 +30,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.+'
     testCompile 'junit:junit:4.12'
     compile 'com.linsea:opendanmaku:1.0.0@aar'
+    compile 'com.zhy:okhttputils:2.0.0'
 }
